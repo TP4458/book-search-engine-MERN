@@ -19,7 +19,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    findUser: User
+    me: User
   }
 
   type Auth {
