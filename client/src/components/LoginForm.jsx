@@ -1,7 +1,6 @@
 // see SignupForm.js for comments
 import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-
 // import { loginUser } from '../utils/API';
 import Auth from '../utils/auth';
 import { USER_LOGIN } from '../utils/mutations';
@@ -11,7 +10,7 @@ const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [userLogin, { data, error }] = useMutation(USER_LOGIN);
+  const [userLogin, { error }] = useMutation(USER_LOGIN);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
